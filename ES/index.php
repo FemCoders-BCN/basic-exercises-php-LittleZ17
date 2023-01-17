@@ -80,13 +80,32 @@
     //BÁSICOS
     //Ejercicio 1 -> Crear una variable por cada tipo de dato (excepto objeto).
 
-    $string = 'Hola';
     //Continúa escribiendo tu código aquí...
+    $string = 'Hola';
+    $integer = 1;
+    $float = 1.55;
+    $boolean = TRUE;
+    $array = array("Zindy", "barcelona", 27);
+    $null = NULL;
+
 
     //Ejercicio 2 -> Imprimir las variables en pantalla (Averigua cómo imprimir el valor booleano (que imprima true o false), un array y un valor nulo (que imprima NULL).
 
     //Escribe tu código aquí...
 
+    echo "$string <br>";
+    echo "$integer<br>";
+    echo "$float<br>";
+    if ($boolean) {
+        print "true";
+        echo "<br>";
+    };
+    var_dump($array);
+    echo "<br>";
+    if (!$null) {
+        print "NULL";
+        echo "<br>";
+    };
     ?>
 
     <h3>De tipo Strings</h3>
@@ -105,36 +124,60 @@
     <?php
     //EJERCICIOS TIPO DE DATOS STRINGS
     //Ejercicio 3 -> Crea una variable de tipo string cuyo valor sea 'Hola Mundo' e imprime en pantalla.
-
     //Escribe tu código aquí...
+    $saludo = 'Hola Mundo';
+    echo $saludo;
+    echo "<br>";
+
 
     //Ejercicio 4 -> Convierte todos los caracteres del string a mayúsculas e imprimir en pantalla, sin modificar la variable original.
 
     //Escribe tu código aquí...
+    echo strtoupper("$saludo\n");
+    echo "<br>";
 
     //Ejercicio 5 -> Imprime en pantalla la longitud de la variable tipo string.
-
     //Escribe tu código aquí...
+    echo strlen($saludo);
+    echo "<br>";
 
     //Ejercicio 6 -> Imprime en pantalla la cantidad de palabras de la variable tipo string.
 
     //Escribe tu código aquí...
+    echo str_word_count($saludo, 0);
+    echo "<br>";
+
 
     //Ejercicio 7 -> Cambia a orden inverso los caracteres de la variable string e imprime en pantalla, sin modificar la variable original.
 
     //Escribe tu código aquí...
 
+    echo strrev($string);
+    echo "<br>";
+
+
     //Ejercicio 8 -> Reemplaza la palabra 'Hola' de tu variable original a 'Holi' e imprime en pantalla.
 
     //Escribe tu código aquí...
+
+    echo substr($string, 0, -1) . "i";
+    echo "<br>";
+
 
     //Ejercicio 9 -> Crea una nueva variable con el valor de 'Comenzamos con PHP' e imprime la concatenación de tu variable inicial y ésta segunda. 
 
     //Escribe tu código aquí...
 
+    $newstr = "Comenzamos con PHP";
+    echo $string . " " . $newstr;
+    echo "<br>";
+
     //Ejercicio 10 -> Crea una constante con tu nombre e imprime en pantalla.
-    
+
     //Escribe tu código aquí...
+    const NAME = "Zindy Martinez";
+    echo NAME;
+    echo "<br>";
     ?>
 
     <h3>De tipo Integer y Double</h3>
@@ -159,45 +202,95 @@
 
     //Escribe tu código aquí...
 
+    echo "<h2>INTEGER</h2>";
+    echo $num1 = 170;
+    echo "<br>";
+    echo $num2 = 98;
+    echo "<br>";
+
+
+
     //Ejercicio 12 -> suma ambas variables de tipo integer e imprime en pantalla.
 
     //Escribe tu código aquí...
 
+    echo $sum = "Suma: " . $num1 + $num2;
+    echo "<br>";
+
     //Ejercicio 13 -> resta ambas variables de tipo integer e imprime en pantalla.
 
     //Escribe tu código aquí...
+    echo $res = "Resta: " . $num1 - $num2;
+    echo "<br>";
 
     //Ejercicio 14 -> multiplica ambas variables de tipo integer e imprime en pantalla.
 
     //Escribe tu código aquí...
+    echo $mul = "Multiplicacion: " . $num1 * $num2;
+    echo "<br>";
 
     //Ejercicio 15 -> divide ambas variables de tipo integer e imprime en pantalla.
 
     //Escribe tu código aquí...
+    echo $div = "Division: " . $num1 / $num2;
+    echo "<br>";
 
     //Ejercicio 16 -> calcula el módulo de ambas variables de tipo integer e imprime en pantalla.
 
     //Escribe tu código aquí...
+    echo $mod = "Mod: " . $num1 % $num2;
+    echo "<br>";
 
     //Ejercicio 17 -> declara dos variables y dale un valor de tipo double e imprime ambas en pantalla.
 
     //Escribe tu código aquí...
+    echo $numDouble1 = 20.52;
+    echo "<br>";
+    echo $numDouble2 = 1.90;
+    echo "<br>";
+
 
     //Ejercicio 18 -> repite los pasos del 2 al 6 pero para las variables de tipo double e imprime en pantalla.
 
     //Escribe tu código aquí...
 
+    echo "<h2>DOUBLE</h2>";
+    echo $sum2 = "Suma: " . $numDouble1 + $numDouble2;
+    echo "<br>";
+
+    echo $res2 = "Resta: " . $numDouble1 - $numDouble2;
+    echo "<br>";
+
+    echo $mul2 = "Multiplicacion: " . $numDouble1 * $numDouble2;
+    echo "<br>";
+
+    echo $div2 = "Division: " . $numDouble1 / $numDouble2;
+    echo "<br>";
+
+    // echo $mod2 = "Mod: " . $numDouble1 % $numDouble2;
+    echo "<br>";
+
     //Ejercicio 19 -> declara una variable de tipo integer con un valor negativo y cambia con una función propia de php al valor positivo e imprime en pantalla.
 
     //Escribe tu código aquí...
+    $numNeg = -17;
+    echo abs($numNeg);
+    echo "<br>";
 
     //Ejercicio 20 -> Declara una variable de tipo double y redondea su valor, imprime en pantalla.
 
     //Escribe tu código aquí...
+    $double = 1256.5797;
+    echo round($double);
+    echo "<br>";
 
     //Ejercicio 21 -> obtén un número aleatorio del 1 al 100 e imprime en pantalla.
 
     //Escribe tu código aquí...
+    $min = 1;
+    $max = 100;
+    echo rand($min, $max);
+    echo "<br>";
     ?>
 
     <h3>De tipo Array</h3>
@@ -215,20 +308,33 @@
     //Ejercicio 22 -> declara un array con datos de tipo string e imprime en pantalla.
 
     //Escribe tu código aquí...
+    $cities = array("Paris", "Barcelona", "Milan");
+    var_dump($cities);
+    echo "<br>";
 
     //Ejercicio 23 -> obtén el largo del array e imprime en pantalla.
 
     //Escribe tu código aquí...
+    echo var_dump(count($cities));
+    echo "<br>";
 
     //Ejercicio 24 -> agrega un valor tipo string al array que creaste anteriormente e imprime en pantalla.
-
     //Escribe tu código aquí...
+    array_push($cities, "Miami");
+    var_dump($cities);
+    echo "<br>";
 
     //Ejercicio 25 -> ahora agrega 2 elementos más a tu array e imprime en pantalla.
 
     //Escribe tu código aquí...
+    array_push($cities, "London", "Munich");
+    var_dump($cities);
+    echo "<br>";
 
     //Ejercicio 26 -> crea un nuevo array y concaténalo con el anterior e imprime en pantalla.
 
     //Escribe tu código aquí...
+    $colors = array("white", "purple", "black");
+    print_r (array_merge($cities, $colors));
+    echo "<br>";
     ?>
